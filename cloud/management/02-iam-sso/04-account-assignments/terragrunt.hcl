@@ -5,11 +5,13 @@ include {
 dependency "organization" {
   config_path = "../..//00-organization"
   mock_outputs = {
-    accounts = [
-      {
-        id = "123123123"
-      }
-    ]
+    organization = {
+      accounts = [
+        {
+          id = "123123123"
+        }
+      ]
+    }
   }
 }
 

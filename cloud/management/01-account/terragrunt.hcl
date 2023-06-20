@@ -8,7 +8,7 @@ dependency "organization" {
 }
 
 terraform {
-  source = "tfr:///blackbird-cloud/account-info/aws?version=1.0.2"
+  source = "tfr:///blackbird-cloud/account-info/aws//?version=1.0.2"
 }
 
 inputs = {

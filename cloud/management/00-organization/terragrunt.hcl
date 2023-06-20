@@ -7,7 +7,7 @@ locals {
 }
 
 terraform {
-  source = "tfr:///blackbird-cloud/organization/aws?version=2.1.0"
+  source = "tfr:///blackbird-cloud/organization/aws//?version=2.1.0"
 }
 
 inputs = {

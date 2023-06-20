@@ -8,20 +8,9 @@ dependency "organization" {
     organization = {
       roots = [
         {
-          id = "o-12345"
+          id = "r-12345"
         }
       ]
-    }
-  }
-}
-
-dependency "github_oidc" {
-  config_path = "../..//03-stacks/github-oidc-provider"
-  mock_outputs = {
-    stack = {
-      outputs = {
-        ServiceRoleRoleId = "a-1234"
-      }
     }
   }
 }
@@ -31,7 +20,7 @@ locals {
 }
 
 terraform {
-  source = "tfr:///blackbird-cloud/cloudformation-stackset/aws?version=1.0.1"
+  source = "tfr:///blackbird-cloud/cloudformation-stackset/aws//?version=1.0.1"
 }
 
 inputs = {
@@ -48,7 +37,7 @@ inputs = {
 
   parameters = {
     RoleName          = local.global.github_role_name
-    PrincipalARN      = dependency.github_oidc.outputs.stack.outputs.ServiceRoleRoleId
+    PrincipalARN      = local.global.github_role_arn
     ManagedPolicyARNs = "arn:aws:iam::aws:policy/AdministratorAccess"
   }
 

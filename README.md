@@ -17,7 +17,7 @@ This Repository includes:
 ## How to deploy
 
 1. Create AWS Account, make sure you note down the account name and account id
-2. Select the region you want to create your environment in, and note it down
+2. Select the region you want to create your environment in, select it on your AWS console, and note it down.
 3. Deploy Both `stacks/github-oidc-provider.yaml` and `stacks/terraform-state.yaml` to CloudFormation
     * For github oidc provider stack fill in `SubjectClaimFilters` with the following format `repo:YOUR_ORGANIZATION/YOUR_REPO:ref:refs/heads/BRANCH_NAME` we advise to deploy use `main` as branch name. This is nessecary to make sure that only GitHub Actions that run on the main branch are allowed to plan and apply changes on AWS
     * Once the terraform state stack is done note down the bucket name, it will be used as the state bucket for the next steps.

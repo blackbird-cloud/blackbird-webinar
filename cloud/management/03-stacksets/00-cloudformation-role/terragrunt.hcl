@@ -8,7 +8,7 @@ dependency "organization" {
     organization = {
       roots = [
         {
-          id = "o-12345"
+          id = "r-12345"
         }
       ]
     }
@@ -18,12 +18,12 @@ dependency "organization" {
 dependency "account" {
   config_path = "../..//01-account"
   mock_outputs = {
-    account_id = "123"
+    account_id = "570100275646"
   }
 }
 
 terraform {
-  source = "tfr:///blackbird-cloud/cloudformation-stackset/aws?version=1.0.1"
+  source = "tfr:///blackbird-cloud/cloudformation-stackset/aws//?version=1.0.1"
 }
 
 inputs = {

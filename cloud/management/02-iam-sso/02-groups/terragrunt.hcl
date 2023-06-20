@@ -6,7 +6,10 @@ dependency "users" {
   config_path = "..//01-users"
   mock_outputs = {
     users = {
-      "john.doe@email.com" = {
+      "joeri.malmberg@blackbird.cloud" = {
+        user_id = "user_id"
+      }
+      "sakif.surur@blackbird.cloud" = {
         user_id = "user_id"
       }
     }
@@ -28,7 +31,8 @@ inputs = {
       display_name = "Administrators"
       description  = "Administrators"
       members = [
-        dependency.users.outputs.users["john.doe@email.com"].user_id,
+        dependency.users.outputs.users["joeri.malmberg@blackbird.cloud"].user_id,
+        dependency.users.outputs.users["sakif.surur@blackbird.cloud"].user_id,
       ]
     }
   ]

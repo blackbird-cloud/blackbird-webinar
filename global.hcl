@@ -5,8 +5,8 @@ locals {
 
   ### MANUAL STEP: Enter manually
   region            = "eu-central-1"
-  organization_name = "myorg"
-  project           = "mycloud"
-  github_role_arn   = ""
+  organization_name = "blackbird-webinar"
+  project           = "blackbird-webinar"
+  github_role_arn   = "arn:aws:iam::570100275646:role/GitHub"
   ## ===========================
 }
