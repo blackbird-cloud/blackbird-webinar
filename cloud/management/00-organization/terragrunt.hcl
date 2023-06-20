@@ -19,7 +19,6 @@ inputs = {
     "inspector2.amazonaws.com",
     "aws-artifact-account-sync.amazonaws.com",
     "health.amazonaws.com",
-    "stacksets.cloudformation.amazonaws.com",
     "member.org.stacksets.cloudformation.amazonaws.com",
     "cloudtrail.amazonaws.com",
     "config.amazonaws.com",
